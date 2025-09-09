@@ -66,3 +66,35 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+/*SAJÁT CUCC*/
+
+.toggleSwitch{
+  --height: 30px;
+
+  aspect-ratio: 2 / 1;
+  height: var(--height);
+  border-radius: calc(var(--height) / 2);
+
+  transition: background 0.2s;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  div{
+    left: 2px;
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    height: calc(var(--height) - 4px);
+    background: white;
+    border-radius: 50%;
+    transition: 0.2s;
+  }
+
+  div.active{
+    left: calc(var(--height) + 2px);
+  }
+}
